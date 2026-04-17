@@ -1,12 +1,25 @@
 from kivy.app import App
 from kivy.uix.button import Button
 from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.popup import Popup
-from kivy.uix.label import Label
+from kivy.core.window import Window
+
+Window.clearcolor = (0, 0, 0, 1)
 
 class TanriApp(App):
-    def tiklandi(self, instance):
-        popup = Popup(title='TANRI APK',
-                      content=Label(text='ÇALIŞIYOR KRAL!'),
-                      size_hint=(0.6, 0.4))
-        popup.open()
+    def build(self):
+        layout = BoxLayout(padding=50)
+        
+        btn = Button(
+            text='ÇALIŞIYOR KRAL\nBANA TIKLA', 
+            font_size='30sp',
+            background_color=(0, 1, 0, 1)
+        )
+        
+        def tiklandi(instance):
+            instance.text = 'HELAL BAŞKAN\nBASTIN BANA'
+        
+        btn.bind(on_press=tiklandi)
+        layout.add_widget(btn)
+        return layout
+
+TanriApp().run()
