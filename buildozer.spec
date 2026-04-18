@@ -1,12 +1,9 @@
-[app]
-title = God APK
-package.name = godapk
-package.domain = org.rakgul
-source.dir =.
-source.include_exts = py,png,jpg,kv,atlas
-version = 0.1
-requirements = python3,kivy
-orientation = portrait
+# Satır 39 civarı
+requirements = python3,kivy,requests,urllib3,certifi
 
-[buildozer]
-log_level = 2
+# Satır 81 civarı 
+android.permissions = INTERNET
+
+# Satır 14 civarı
+android.api = 33
+android.minapi = 21
