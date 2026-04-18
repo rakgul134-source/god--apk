@@ -12,7 +12,4 @@ class AvciAvApp(App):
         self.layout = BoxLayout(orientation='vertical', padding=20, spacing=15)
         
         self.baslik = Label(
-            text='AVCI AV - 01 1 0 Kuralı',
-            font_size='24sp',
-            size_hint_y=None,
-            height=50
+            text='AVCI 
